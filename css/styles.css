@@ -111,6 +111,7 @@ nav h1 a {
   background-color: #FFA500;
   align-items: center;
 	display: flex;
+	flex-wrap: wrap;
 	justify-content: center;
 }
 .filter-options h2 {
@@ -281,23 +282,68 @@ nav h1 a {
 #restaurant-hours td {
   color: #666;
 }
-/* media-queries */
 
-@media only screen and (max-width: 600px) {
+/* Adding skip-link to avoid map and go to filter option directly to implement focus on index page */
+.skip-link {
+    display: block;
+    position: absolute;
+    top: 15px;
+    left: -1000px;
+    background-color: white;
+    padding: 5px 10px;
+}
+.skip-link:focus {
+    left: 15px;
+}
+
+/* media-queries */
+@media only screen and (max-width: 700px) {
 	body {
 		margin: 0;
 	}
-	.filter-options h2 {
-	  font-size: 0.8rem;
-		padding-left: 0px;
-	}
-	.filter-options select {
-	  margin: 6px;
-		font-size: 7pt;
-	  padding: 0 10px;
-	  width: 120px;
-	}
-	nav h1 a {
-	  font-size: 8pt;
-	  letter-spacing: 6px;
+.filter-options {
+	flex-direction: column;
+}
+.filter-options h2 {
+	padding-top: 2%;
+}
+nav h1 a {
+	font-size: 8pt;
+	letter-spacing: 6px;
+}
+#restaurant-name {
+	font-size: 13pt;
+}
+#restaurant-container{
+	padding: 180px 0px 0px 6px;
+	margin-right: 0;
+}
+#restaurant-address {
+	font-size: 8pt;
+  margin: 8px 0px;
+}
+#restaurant-hours td {
+  font-size: 8pt;
+}
+#reviews-container h2{
+	font-size: 15pt;
+	font-weight: 200;
+}
+#reviews-container {
+	padding: 5px 5px;
+}
+#reviews-list li {
+	padding-right: 5px;
+}
+#reviews-list li {
+	margin-bottom: 40px;
+}
+.inside #footer {
+	font-size: 10px;
+}
+.inside #map-container {
+	margin:0;
+	padding: 0;
+	padding-left: -20px;
+}
 }
