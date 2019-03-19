@@ -72,7 +72,7 @@ nav h1 a {
     background-color: #eee;
     font-size: 17px;
     margin: 0;
-    width: calc(50% - 80px);
+    width: 100%; //calc(50% - 80px);
 }
 
 /* Display list items side by side */
@@ -97,6 +97,10 @@ nav h1 a {
 #breadcrumb li a:hover {
     color: #01447e;
     text-decoration: underline;
+}
+/* Add color to restaurant name in nav*/
+.addColor {
+	color: #f18200;
 }
 /* ====================== Map ====================== */
 #map {
@@ -217,7 +221,10 @@ nav h1 a {
 	margin-bottom: 0px;
 }
 #restaurant-name {
-  color: #f18200;
+  color: white;
+	background-color: #f18200;
+	padding: 1%;
+	width: 88%;
   font-family: Arial,sans-serif;
   font-size: 20pt;
   font-weight: 200;
@@ -267,7 +274,7 @@ nav h1 a {
 }
 #reviews-list li {
   background-color: #fff;
-    border: 2px solid #f3f3f3;
+  box-shadow: 1px 1px 2px #C0C0C0;
   display: block;
   list-style-type: none;
   margin: 0 0 30px;
@@ -278,6 +285,7 @@ nav h1 a {
 }
 #reviews-list li p {
   margin: 0 0 10px;
+	padding-top: 5px;
 }
 #restaurant-hours td {
   color: #666;
